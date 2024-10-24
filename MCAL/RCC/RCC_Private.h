@@ -10,30 +10,7 @@
 #define RCC_PRIVATE_H_
 
 
-/********************************************
-* 		Struct for the RCC registers
-********************************************/
-typedef struct
-{
-	volatile uint32_t CR;
-	volatile uint32_t CFGR;
-	volatile uint32_t CIR;
-	volatile uint32_t APB2RSTR;
-	volatile uint32_t APB1RSTR;
-	volatile uint32_t AHBENR;
-	volatile uint32_t APB2ENR;
-	volatile uint32_t APB1ENR;
-	volatile uint32_t BDCR;
 
-}RCC_Register_t;
-
-
-/*******************************************************
- * 			RCC base Address & Ptr to structu
- * *****************************************************/
-#define BASE_ADDRESS_RCC	0x40021000
-
-RCC_Register_t *RCC = ((RCC_Register_t *) BASE_ADDRESS_RCC);
 
 
 
