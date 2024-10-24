@@ -8,6 +8,9 @@
 
 #include "stdint.h"
 
+
+#include "Stm32F103C8T6.h"
+
 #include "RCC_Private.h"
 #include "RCC_Config.h"
 #include "RCC_Interface.h"
