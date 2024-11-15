@@ -10,6 +10,11 @@
 #define STM32F103C8T6_H
 
 
+
+/******************* Core Peripherals Base Addresses *******************/
+#define SYSTICK_BASE_ADDRESS	0xE000E010UL
+
+
 /******************* Various Memories Base Addresses *******************/
 #define FLASH_BASE_ADDRESS		0x20000000UL
 #define SRAM_BASE_ADDRESS		0x08000000UL
@@ -54,6 +59,18 @@ typedef struct
 
 
 
+
+/******************* SYSTICK Registers Definition Structures *******************/
+typedef struct
+{
+	volatile uint32_t CSR;			/*SysTick Control and Status register*/
+	volatile uint32_t RVR;          /*SysTick Reload Value register*/
+	volatile uint32_t CVR;          /*SysTick Current Value register*/
+	volatile uint32_t CALIB;        /*SysTick Calibration Value register*/
+
+}SYSTICK_RegDef_t;
+
+
 /******************* GPIO Registers Definition Structures *******************/
 typedef struct
 {
@@ -74,6 +91,10 @@ typedef struct
 
 /******************* RCC Peripheral Definitions *******************/
 #define RCC		((RCC_Register_t *) RCC_BASE_ADDRESS)
+
+
+/******************* SysTick Peripheral Definitions *******************/
+#define SYSTICK	((SYSTICK_RegDef_t *) SYSTICK_BASE_ADDRESS)
 
 
 /******************* GPIO Peripheral Definitions *******************/
